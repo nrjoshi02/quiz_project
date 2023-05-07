@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Quiz App</title>
+      <style>
+        body {
+        /* background-color: #61c4f3; */
+        background-image: url("https://img.freepik.com/free-photo/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product_1258-68131.jpg"); 
+        font-family: Arial, sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* background-repeat: no-repeat; */
+      }
+      #result {
+        margin-top: 180px;
+      }
+      .nav-container {
+        background-color: #000000cc;
+        backdrop-filter: blur(50px);
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 83vw;
+        margin: 0px auto;
+        padding: 20px 0;
+      }
+      .timer-div {
+        display: flex;
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        color: #f2f2f2;
+      }
+      .h2 {
+        color: white;
+        text-align: right;
+      }
+      h3 {
+        margin-top: 40px;
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+      }
+      form {
+        width: 80%;
+        margin: 30px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      button[type="submit"] {
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      /* .timer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-left: 30px;
+} */
+/* #timer {
+  position: relative;
+}
+#timer:before {
+  content: "\f017";  */
+  /* font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: -95px;
+  top: 3px; */
+/* } */
+/* #t1{
+  margin-left: 30px;
+  margin-top: 20px;
+} */
+.timer-container {
+  width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  top: 0;
+}
+.timer {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.fa-clock-o {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+      </style>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script>
+        if(localStorage.getItem("count_timer")){
+          var count_timer = localStorage.getItem("count_timer");
+        }
+        else{
+          var count_timer = 1200;
+        }
+        var minutes = parseInt(count_timer/60);
+        var seconds = parseInt(count_timer%60);
+        function countDownTimer(){
+          if(seconds<10){
+            seconds = "0" + seconds;
+          }
+          if(minutes<10){
+            minutes = "0" + minutes;
+          }
+          
+          
+document.getElementById("timer").innerHTML = "<span style='color:white'>Time Left : </span>"+minutes+" Minutes "+seconds+" Seconds";
+           const myForm = document.getElementById('myForm');
+          myForm.addEventListener('submit',function(){
+            localStorage.clear("count_timer");
+          })
+         
+          if(count_timer <= 0){
+                    localStorage.clear("count_timer");
+                    clearInterval(timer);
+                    $("#myForm").submit();
+         } else {
+        count_timer = count_timer -1 ;
+        minutes = parseInt(count_timer/60);
+        seconds = parseInt(count_timer%60);
+        localStorage.setItem("count_timer",count_timer);
+        setTimeout("countDownTimer()",1000);
+    }
+        }
+        setTimeout("countDownTimer()",1000);
+        </script>
+      <script>
+        function preventBack(){
+          window.history.forward();
+        }
+        setTimeout("preventBack()",0);
+        window.onunload = function(){null};
+        
+//         $(document).ready(function() {
+//   // add event listener to submit button
+//   $("button[type='submit']").click(function(e) {
+//     e.preventDefault();
+//     // display a confirmation dialog to the user
+//     var result = confirm("Are you sure you want to submit your answers ?");
+//     console.log(result);
+//     if (result) {
+//       // submit the form
+//       $("#myForm").submit();
+//       localStorage.clear("count_timer");
+
+//     }
+//   });
+// });
+    </script>
+
+<!-- <script>
+  window.onload = function() {
+    const form = document.querySelector('form');
+    console.log(form)
+    
+    form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const name = document.querySelector('#name').value;
+  console.log(name)
+  const url = window.location.href + '?name=' + encodeURIComponent(name);
+  console.log(url)
+  window.location.href = url;
+}); -->
+
+  <!-- } -->
+</script>
+    </head>
+    <body>
+      <div class="nav-container">
+
+        <div class="nav">
+          <img src="modernlogo.jpeg" >
+          <div class="timer-div">
+            <h2 class="h2" ><%= message %></h2>
+            <div class="timer-container">
+              <i style="font-size:24px" class="fa fa-clock-o"></i>
+              <div id="timer" class="timer"></div>
+            </div>
+          </div>
+          
+          
+          <!-- <h1>Quiz</h1> -->
+        </div>
+      </div>
+
+      
+
+<div id="result"></div>
+      <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>var timeLimit = 120; // 2 minutes</script>
+      <script>
+         $(document).ready(function() {
+        var timer = setInterval(function() {
+            timeLimit--;
+            $("#timer").text(timeLimit);
+            if (timeLimit <= 0) {
+                clearInterval(timer);
+                $("#myForm").submit();
+            }
+        }, 1000);
+    });
+      </script> -->
+
+      
+      <!-- <div>Time Left: <span id="timer"></span></div> -->
+
+      <!-- <div id="timer" align="center"> </div> -->
+
+      
+      
+      <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_GdJbX_aiv-3Eh6p_kEP9Tyv5DmToei6Bdo3phfdC&s" alt="Image description"> -->
+
+      <form id="myForm" method="post" action="/check-answers">
+        <% questions.forEach(function(question) { %>
+          <h3><%= question.question %></h3>
+          <% for (var i = 0; i < question.choices.length; i++) { %>
+            <label>
+              <input type="radio" name="<%= question.id %>" value="<%= question.choices[i] %>">
+              <%= question.choices[i] %>
+            </label>  
+          <% } %>
+        <% }); %>
+        <button type="submit">Submit</button>
+      </form>
+    </body>
+  </html>

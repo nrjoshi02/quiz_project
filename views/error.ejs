@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style1.css">
+    
+
+    <title>Quiz App</title>
+    <script>
+    setTimeout(() => {
+      window.location.href = "/login";
+    }, 5000) // 5000 milliseconds = 5 seconds
+    
+    function preventBack(){
+          window.history.forward();
+        }
+        setTimeout("preventBack()",0);
+        window.onunload = function(){null};
+    
+    </script>
+
+    <style>
+      html{
+    background-color: rgb(90, 92, 92);
+}
+body,h1{
+    color: black;
+}
+body,p{
+    height: 30%;
+    background-color: rgb(253, 248, 248);
+    color: black;
+}
+    </style>
+  </head>
+  <body>
+    <h1><center><b>---------------------------------------------------------QUIZ FINISHED---------------------------------------------------------</b></center></h1>
+    <center><img src="https://static8.depositphotos.com/1431107/919/i/950/depositphotos_9199988-stock-photo-oops-icon.jpg" height="200px" width="200px"</center>
+    <p><h2><center><i>You are already acknowledge this quiz....!!!!</i></center></h2> </p>
+  </body>
+</html>

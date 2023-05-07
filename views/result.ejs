@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+    <script>
+    setTimeout(() => {
+      window.location.href = "/login";
+    }, 5000) // 5000 milliseconds = 5 seconds
+    
+    function preventBack(){
+          window.history.forward();
+        }
+        setTimeout("preventBack()",0);
+        window.onunload = function(){null};
+    </script>
+    <style>
+      html{
+    background-color:rgb(149, 237, 238);
+    
+}   
+p,div{
+    margin-top: 10%;
+}
+h2{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25%;
+   
+}
+    </style>
+  </head>
+  <body>
+    <h1><center><b>******* QUIZ STATUS ******* </b></center></h1>
+    <p>
+      
+      <div class="section"> 
+        <center><img src="https://media.istockphoto.com/id/960999328/vector/congratulations-card-with-light-rays.jpg?s=612x612&w=0&k=20&c=MO46WkFcvAbRU-S1nZUz_Rko2d8XJtp-fgBk4fmgn-E="></center>
+      
+      
+        <h2><center><i> You Finished Your Quiz Successfully.....<br>Thank you for your response </i></center></h2>
+      </div>
+    </p>
+  </body>
+</html>

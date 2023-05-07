@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz Portal</title>
+    <link rel="stylesheet" href="style/all_style.css" />
+    
+    <style>
+      .body
+      {
+        margin: 0px;
+        overflow: scroll;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        
+        
+        background-image: url('https://static-prod.adweek.com/wp-content/uploads/2022/12/Untitled_Artwork-5.gif');
+      }
+
+      .header {
+        height: 55px;
+      
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        height: 100px;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        border-bottom-style: solid;
+        
+      }
+
+      .main-container{
+        
+        
+        font-family: Roboto, Arial;
+        color: rgb(255, 255, 255);
+        font-size: xxx-large;
+        
+        
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        
+      }
+      
+        .login-creds
+        {
+          
+          padding-top: 190px;
+          
+          margin-left: 60px;  
+        }
+        .name-post
+        {
+          padding-top: 90px;
+        }
+        .go-button
+        {
+          font-size: large;
+          
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          height: 50px;
+          width: 150px;
+          border-radius: 20px;
+          border: 100px;
+        }
+        .NBox{
+          height: 35px;
+          border-radius: 10px;
+          border-style: initial;
+        }
+        .EBox{
+          height: 35px;
+          border-radius: 10px;
+          border-style: initial;
+        }
+        
+        
+        .team{
+          position: absolute;
+          margin: 0;
+          padding-top: 85px;
+          padding-left: 20px;
+        }
+        .left-head
+        {  
+          padding-left: 50px;
+          width: 250px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .right-logo
+        { position: absolute;
+          
+          height: 100%;
+        width: 80%;
+        padding: 300px;
+        padding-left: 100px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+         margin-top: 1000px;
+
+        
+          
+        }
+        
+        .rules
+
+        { margin-bottom: 100%;
+          justify-content: center;
+          
+          padding: 300px;
+          margin: 0;
+          font: size 3px;;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .right-head
+        {
+          width: 500px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    
+        }
+        .ponsars
+        {
+          position: absolute;
+          
+          height: 100%;
+        width: 100%;
+        padding: 300px;
+        padding-left: 400px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+         margin-top: 780px;
+        }
+        
+    </style>
+  </head>
+  <body class="body" bgproperties="fixed">
+    <header class="header">
+      <div  class="left-head">
+        <div>
+          <img src="https://i.postimg.cc/xCfBqd7N/clglogo.png" alt="sorry" width="100" height="100">
+        </div>
+        <div>
+          <img src="https://i.postimg.cc/bJmWnhcC/clublogo.jpg" alt="sorry" width="100" height="100">
+        </div>
+        
+        
+      </div>
+      <div class="right-head">
+        <a href="#login">QUIZ🚀</a> 
+        <a href="#rules">RULES</a> 
+        <a href="#team">OurTEAM</a> 
+        <a href="#loggos">PARTNERS</a> 
+        
+        
+      </div>
+      
+    </header>
+  <div class="main-container">
+    
+    
+    <div id="login" class="login-creds"
+    <h1>Wanna Win?</h1>
+    
+    <script>
+      function preventBack(){
+          window.history.forward();
+
+        }
+        setTimeout("preventBack()",0);
+        window.onunload = function(){null};
+    </script>
+    <form method="post" action="/take-quiz">
+      <div class="name-post" >
+        Enter Name: 
+        <input class="NBox" type="text" id="Name" name="Name" required>
+      </div>
+      <div class="email-post">
+        Enter Email : 
+        <input class="EBox" type="text" id="Email" name="Email" required>
+            </div>
+        
+        <br>
+        <br>
+      
+        <button class="go-button" type="submit">🚀Take Quiz🚀</button>
+    </form> 
+  
+  </div>
+
+  
+  <div id="rules" class="rules" >
+    <div class="big-rule">
+                               !!!RULES!!!
+    </div>
+    1. Quiz will be of 20 minutes along with 20 question. <br>
+
+    2. Do not click back or reload the page.<br>
+
+    3. Incase of reload you wont get a second chance to take the quiz.<br>
+
+    4. Enter Valid Email and Full name inorder to take the quiz.<br>
+
+    5. No extra time will be provided as timer goes off the quiz will end.<br>
+
+    6. Any malpratice like using phone, searching on other tabs, asking other attendees, your attempt will be  discarded.<br>
+
+    7. Have Fun. All The Best !!!
+
+  </div>
+
+  <div id="team" class="team">
+    <img src="https://i.postimg.cc/Dy4RJs8G/Picsart-23-05-06-20-46-12-742.png" alt="">
+  </div>
+
+  
+    
+    <div class="ponsars">
+      OUR PARTNERS
+    </div>
+    <div id="loggos" class="right-logo">
+      
+      <div class="logo1">
+        <a href="https://bharatblockchain.io/">
+          <img src="https://i.postimg.cc/3wHs51FB/BBN-Logo-Portrait-page-0001.jpg" alt="sorry" width="200" height="200">
+        </a>
+      </div>
+      <div class="logo2">
+        <a href="https://learn.idssoft.com/">
+          <img src="https://i.postimg.cc/brdMHBqz/partner1.png" alt="sorry" width="480" height="200">
+        </a>
+      </div>
+      <div class="logo3">
+        <a href="https://www.web3samaj.com/">
+          <img src="https://i.postimg.cc/q7X9kKmd/partner2.jpg" alt="sorry" width="350" height="200">
+        </a>
+      </div>
+    </div>
+    
+  
+  </body>
+</html>
