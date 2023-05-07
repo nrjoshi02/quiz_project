@@ -66,6 +66,10 @@ app.get('/login',async(req,res)=>{
   res.render('login');
 })
 
+app.get('/',async(req,res)=>{
+  res.render('login');
+})
+
 app.post('/take-quiz', async (req, res) => {
   const Name = req.body.Name;
   const Email = req.body.Email;
